@@ -1,0 +1,9 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+}
+
+.chat-section {
+  background-color: #f7ecdc;
+  width: calc(100vw - 350px);
+}
