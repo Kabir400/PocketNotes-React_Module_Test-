@@ -12,6 +12,7 @@ function Popup({ show, onClose, deta, setDeta, group, setGroup }) {
         return updatedDeta;
       });
       onClose();
+      setGroup({ ...group, title: "" });
     } else {
       alert("Please Enter a Group Name!");
     }
@@ -40,9 +41,14 @@ function Popup({ show, onClose, deta, setDeta, group, setGroup }) {
             {colorArr.map((ele, index) => {
               return (
                 <div
-                  className="color"
+                  className={`color ${
+                    group.color == ele ? "color-border" : ""
+                  }`}
                   key={index}
                   style={{ backgroundColor: ele }}
+                  onClick={() => {
+                    setGroup({ ...group, color: ele });
+                  }}
                 ></div>
               );
             })}

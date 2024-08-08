@@ -1,4 +1,6 @@
 import React from "react";
+import getLetters from "../utility/getLetters.js";
+
 import "../css/sidebar.css";
 
 function Sidebar({ toggle, deta }) {
@@ -14,7 +16,7 @@ function Sidebar({ toggle, deta }) {
                   className="sidebar-profile"
                   style={{ backgroundColor: ele.color }}
                 >
-                  {ele.title[0]}
+                  {getLetters(ele.title)}
                 </div>
                 <p className="sidebar-group-text">{ele.title}</p>
               </div>
