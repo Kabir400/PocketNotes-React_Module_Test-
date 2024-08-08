@@ -21,15 +21,15 @@
 }
 .chat-section-pre-text-box h2 {
   align-self: center;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 58.59px;
-  font-size: 33px;
+  font-size: 30px;
 }
 
 .chat-section-pre-text-box p {
   max-width: 470px;
   align-self: center;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 20px;
   color: #292929;
 }
