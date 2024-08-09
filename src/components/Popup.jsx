@@ -2,7 +2,7 @@ import React from "react";
 import "../css/popup.css";
 import { colorArr } from "../utility/colorArr";
 
-function Popup({ show, onClose, deta, setDeta, group, setGroup }) {
+function Popup({ show, onClose, setDeta, group, setGroup }) {
   //create group function
   const createGroup = (e) => {
     if (group.title) {

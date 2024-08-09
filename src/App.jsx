@@ -17,13 +17,15 @@ function App() {
     notes: [],
   }); //for setting up the group
 
+  const [index, setIndex] = useState(-1); //setting up the index for post-chat
+
   const toggleModal = () => {
     setShow(!show);
   };
 
   useEffect(() => {
     const savedDeta = JSON.parse(localStorage.getItem("pocketDeta"));
-    console.log(savedDeta);
+
     if (savedDeta) {
       setDeta(savedDeta);
     }
@@ -31,15 +33,18 @@ function App() {
 
   return (
     <div className="home-container">
-      <Sidebar toggle={toggleModal} deta={deta}></Sidebar>
-      {/* <ChatSectionPre></ChatSectionPre> */}
-      <ChatSectionPost />
+      <Sidebar toggle={toggleModal} deta={deta} setIndex={setIndex}></Sidebar>
+      {index < 0 ? (
+        <ChatSectionPre></ChatSectionPre>
+      ) : (
+        <ChatSectionPost index={index} deta={deta} setDeta={setDeta} />
+      )}
+
       <Popup
         show={show}
         onClose={toggleModal}
         group={group}
         setGroup={setGroup}
-        deta={deta}
         setDeta={setDeta}
       ></Popup>
     </div>

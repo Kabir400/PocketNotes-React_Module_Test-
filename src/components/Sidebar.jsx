@@ -3,7 +3,7 @@ import getLetters from "../utility/getLetters.js";
 
 import "../css/sidebar.css";
 
-function Sidebar({ toggle, deta }) {
+function Sidebar({ toggle, deta, setIndex }) {
   return (
     <div className="sidebar">
       <div className="sidebar-title">Pocket Notes</div>
@@ -11,7 +11,11 @@ function Sidebar({ toggle, deta }) {
         <div className="sidebar-groups">
           {deta.map((ele, index) => {
             return (
-              <div className="sidebar-group" key={index}>
+              <div
+                className="sidebar-group"
+                key={index}
+                onClick={() => setIndex(index)}
+              >
                 <div
                   className="sidebar-profile"
                   style={{ backgroundColor: ele.color }}
