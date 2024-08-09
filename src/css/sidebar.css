@@ -28,17 +28,33 @@
 .sidebar-groups {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 14px;
   width: 100%;
-  margin-left: 78px;
   margin-top: 24px;
 }
+/* .sidebar-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+} */
 .sidebar-group {
   display: flex;
   gap: 20px;
   align-items: center;
+  padding: 9px 10px 9px 54px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+.sidebar-group:hover {
+  background-color: #2f2f2f2b;
+  transform: scale(1.1);
+}
+
+.sidebar-bg {
+  background-color: #2f2f2f2b;
+}
 .sidebar-profile {
   color: white;
   width: 45px;
@@ -70,6 +86,13 @@
   top: 85%;
   left: 275px;
   z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-btn:hover {
+  background-color: #0d0066;
+  transform: scale(1.03);
 }
 
 /* styling the scrollbar */

@@ -33,7 +33,12 @@ function App() {
 
   return (
     <div className="home-container">
-      <Sidebar toggle={toggleModal} deta={deta} setIndex={setIndex}></Sidebar>
+      <Sidebar
+        toggle={toggleModal}
+        deta={deta}
+        setIndex={setIndex}
+        index={index}
+      ></Sidebar>
       {index < 0 ? (
         <ChatSectionPre></ChatSectionPre>
       ) : (

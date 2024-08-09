@@ -69,7 +69,11 @@ function ChatSectionPost({ index, deta, setDeta }) {
             className="chat-send-btn"
             disabled={message ? false : true}
           >
-            <img src={sendBtn} alt="Submit" />
+            <img
+              src={sendBtn}
+              alt="Submit"
+              className={message ? "active" : ""}
+            />
           </button>
         </form>
       </div>

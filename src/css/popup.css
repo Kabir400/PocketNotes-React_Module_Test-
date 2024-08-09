@@ -53,6 +53,13 @@
   border-radius: 8px;
   font-size: 15px;
   font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.popup-btn:hover {
+  background-color: #0047ab;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 15px rgba(0, 31, 139, 0.3);
 }
 
 .color-box {
@@ -63,6 +70,13 @@
   width: 23px;
   border-radius: 50%;
   height: 23px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.color:hover {
+  transform: scale(1.2);
+
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.8);
 }
 
 .color-border {

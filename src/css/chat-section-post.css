@@ -87,6 +87,7 @@
   outline: none;
   padding: 20px 60px 20px 15px;
   resize: none;
+  font-size: 20px;
 }
 .chat-input::placeholder {
   color: #9a9a9a;
@@ -100,6 +101,7 @@
   background: transparent;
   border: none;
   position: absolute;
+  cursor: pointer;
 }
 
 /* styling the scrollbar */
@@ -112,4 +114,9 @@
 .chat-body::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
   border-radius: 5.5px;
+}
+
+/* for enabling the btn */
+.active {
+  filter: grayscale(100%) brightness(80%) contrast(120%);
 }

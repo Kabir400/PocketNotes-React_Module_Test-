@@ -3,18 +3,18 @@ import getLetters from "../utility/getLetters.js";
 
 import "../css/sidebar.css";
 
-function Sidebar({ toggle, deta, setIndex }) {
+function Sidebar({ toggle, deta, index, setIndex }) {
   return (
     <div className="sidebar">
       <div className="sidebar-title">Pocket Notes</div>
       <div className="sidebar-box">
         <div className="sidebar-groups">
-          {deta.map((ele, index) => {
+          {deta.map((ele, i) => {
             return (
               <div
-                className="sidebar-group"
-                key={index}
-                onClick={() => setIndex(index)}
+                className={`sidebar-group ${i == index ? "sidebar-bg" : ""}`}
+                key={i}
+                onClick={() => setIndex(i)}
               >
                 <div
                   className="sidebar-profile"
