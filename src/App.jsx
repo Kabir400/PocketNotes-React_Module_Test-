@@ -5,6 +5,7 @@ import ChatSectionPre from "./components/ChatSectionPre";
 import Popup from "./components/Popup";
 
 import "./css/app.css";
+import ChatSectionPost from "./components/ChatSectionPost";
 
 function App() {
   const [deta, setDeta] = useState([]); //for main data
@@ -31,7 +32,8 @@ function App() {
   return (
     <div className="home-container">
       <Sidebar toggle={toggleModal} deta={deta}></Sidebar>
-      <ChatSectionPre></ChatSectionPre>
+      {/* <ChatSectionPre></ChatSectionPre> */}
+      <ChatSectionPost />
       <Popup
         show={show}
         onClose={toggleModal}
