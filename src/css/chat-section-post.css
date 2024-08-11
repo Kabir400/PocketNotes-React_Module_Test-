@@ -12,6 +12,7 @@
   align-items: center;
   background-color: #001f8b;
   height: 67px;
+  position: sticky;
 }
 
 .chat-header p {
