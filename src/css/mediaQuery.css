@@ -68,6 +68,22 @@
   .arrow {
     display: block !important;
   }
+
+  .popup-title,
+  .popup-input h3,
+  .popup-chose-color h3 {
+    font-size: 15px !important;
+  }
+  .popup-input input {
+    width: 153px !important;
+  }
+  .color {
+    width: 19px !important;
+    height: 19px !important;
+  }
+  .color-box {
+    width: 142px !important;
+  }
 }
 
 @media screen and (max-width: 500px) {
