@@ -3,9 +3,9 @@ import getLetters from "../utility/getLetters.js";
 
 import "../css/sidebar.css";
 
-function Sidebar({ toggle, deta, index, setIndex }) {
+function Sidebar({ toggle, deta, index, showChat }, ref) {
   return (
-    <div className="sidebar">
+    <div className="sidebar" ref={ref}>
       <div className="sidebar-title">Pocket Notes</div>
       <div className="sidebar-box">
         <div className="sidebar-groups">
@@ -14,7 +14,7 @@ function Sidebar({ toggle, deta, index, setIndex }) {
               <div
                 className={`sidebar-group ${i == index ? "sidebar-bg" : ""}`}
                 key={i}
-                onClick={() => setIndex(i)}
+                onClick={() => showChat(i)}
               >
                 <div
                   className="sidebar-profile"
@@ -35,4 +35,4 @@ function Sidebar({ toggle, deta, index, setIndex }) {
   );
 }
 
-export default Sidebar;
+export default React.forwardRef(Sidebar);

@@ -1,0 +1,104 @@
+@media screen and (max-width: 1000px) {
+  .bg-img {
+    height: 197px;
+  }
+  .chat-section-pre-text-box h2 {
+    font-size: 26px;
+  }
+  .chat-section-pre-text-box p {
+    max-width: 412px;
+    font-size: 14px;
+  }
+  .encription p {
+    font-size: 14px;
+  }
+  .encription img {
+    width: 10px;
+    height: 11px;
+  }
+  .sidebar {
+    width: 312px;
+  }
+  .chat-section-pre {
+    width: calc(100vw - 312px);
+  }
+  .sidebar-btn {
+    left: 243px;
+  }
+  .sidebar-group {
+    padding-left: 43px;
+  }
+  .sidebar-title {
+    font-size: 21px;
+  }
+  .chat-timestamp p {
+    font-size: 14px;
+  }
+  .chat-timestamp div {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .chat-section-pre {
+    display: none;
+  }
+  .sidebar-btn {
+    left: 89%;
+  }
+  .sidebar-title {
+    font-size: 29px;
+  }
+  .sidebar-profile {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+  .sidebar-group-text {
+    font-size: 24px;
+  }
+  .chat-section-post {
+    display: none;
+    width: 100vw !important;
+  }
+  .arrow {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar-btn {
+    left: 83%;
+  }
+  .sidebar-group-text {
+    font-size: 21px;
+  }
+  .sidebar-profile {
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
+  }
+  .sidebar-title {
+    font-size: 24px;
+  }
+  .chat-text-box {
+    width: 97% !important;
+  }
+  .chat-footer form {
+    width: 97% !important;
+  }
+  .chat-input {
+    font-size: 18px !important;
+  }
+  .chat-input::placeholder {
+    font-size: 18px !important;
+  }
+  .chat-send-btn {
+    width: 30px !important;
+    height: 31px !important;
+  }
+}

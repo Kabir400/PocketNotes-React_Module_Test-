@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import sendBtn from "../assets/send_btn.png";
 import getLetters from "../utility/getLetters";
 import { getCurrentDate, getCurrentTime } from "../utility/timeStamp";
+import arrow from "../assets/Arrow.png";
 
 import "../css/chat-section-post.css";
-function ChatSectionPost({ index, deta, setDeta }) {
+function ChatSectionPost({ index, deta, setDeta, goBack }, ref) {
   const [message, setMessage] = useState("");
+  const inputRef = useRef(null); //defining ref for focus
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -25,10 +27,18 @@ function ChatSectionPost({ index, deta, setDeta }) {
     setMessage("");
   };
 
+  //useEffect hook for focus
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
-    <div className="chat-section-post">
+    <div className="chat-section-post" ref={ref}>
       {/* chat header */}
       <div className="chat-header">
+        <div className="arrow" onClick={goBack}>
+          <img src={arrow} alt="back" />
+        </div>
         <div
           className="chat-profile"
           style={{ backgroundColor: deta[index].color }}
@@ -58,6 +68,7 @@ function ChatSectionPost({ index, deta, setDeta }) {
       <div className="chat-footer">
         <form onSubmit={submitHandler}>
           <textarea
+            ref={inputRef}
             type="text"
             className="chat-input"
             placeholder="Enter your text here..........."
@@ -81,4 +92,4 @@ function ChatSectionPost({ index, deta, setDeta }) {
   );
 }
 
-export default ChatSectionPost;
+export default React.forwardRef(ChatSectionPost);
