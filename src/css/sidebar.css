@@ -45,6 +45,9 @@
   border-radius: 16px;
   transition: all 0.3s ease;
   cursor: pointer;
+  /* ...... */
+  max-height: 100px; /* Adjust this value as needed */
+  overflow: hidden;
 }
 
 .sidebar-group:hover {
@@ -63,10 +66,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 .sidebar-group-text {
   font-weight: 500;
   font-size: 17px;
+  overflow: hidden; /* Hide any overflowed text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* sidebar button stying */
