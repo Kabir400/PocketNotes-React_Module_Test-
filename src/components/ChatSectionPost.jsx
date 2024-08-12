@@ -29,8 +29,10 @@ function ChatSectionPost({ index, deta, setDeta, goBack }, ref) {
 
   //useEffect hook for focus
   useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+    if (index >= 0) {
+      inputRef.current.focus();
+    }
+  }, [index]);
 
   return (
     <div className="chat-section-post" ref={ref}>
@@ -74,6 +76,12 @@ function ChatSectionPost({ index, deta, setDeta, goBack }, ref) {
             placeholder="Enter your text here..........."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                submitHandler(e);
+              }
+            }}
           />
           <button
             type="submit"
